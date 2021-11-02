@@ -41,7 +41,7 @@ layout: reference
     - Convert integer to string: `str(...)`.
 
 ## [Built-in Functions and Help]({{ page.root }}/04-built-in/)
-- To add a comment, place `#` before the thing you do not with to be executed.
+- To add a comment, place `#` before the thing you do not wish to be executed.
 - Commonly used built-in functions:
   - `min()` finds the smallest value.
   - `max()` finds the largest value.
