@@ -82,29 +82,6 @@ NameError: name 'last_name' is not defined
 *   The last line of an error message is usually the most informative.
 *   We will look at error messages in detail [later]({{ page.root }}/15-scope/#reading-error-messages).
 
-> ## Variables Persist Between Cells
->
-> Be aware that it is the *order* of execution of cells that is important in a Jupyter notebook, not the order
-> in which they appear. Python will remember *all* the code that was run previously, including any variables you have
-> defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
-> (re)run cells further up, those defined further down will still be present. As an example, create two cells with the
-> following content, in this order:
->
-> ~~~
-> print(myval)
-> ~~~
-> {: .language-python}
->
-> ~~~
-> myval = 1
-> ~~~
-> {: .language-python}
->
-> If you execute this in order, the first cell will give an error. However, if you run the first cell *after* the second
-> cell it will print out `1`. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
-> clears the interpreter and runs everything from a clean slate going top to bottom.
-{: .callout}
-
 ## Variables can be used in calculations.
 
 *   We can use variables in calculations just as if they were values.
@@ -203,37 +180,6 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 *   Use meaningful variable names to help other people understand what the program does.
 *   The most important "other person" is your future self.
 
-> ## Swapping Values
->
-> Fill the table showing the values of the variables in this program
-> *after* each statement is executed.
->
-> ~~~
-> # Command  # Value of x   # Value of y   # Value of swap #
-> x = 1.0    #              #              #               #
-> y = 3.0    #              #              #               #
-> swap = x   #              #              #               #
-> x = y      #              #              #               #
-> y = swap   #              #              #               #
-> ~~~
-> {: .language-python}
-> > ## Solution
-> >
-> > ~~~
-> > # Command  # Value of x   # Value of y   # Value of swap #
-> > x = 1.0    # 1.0          # not defined  # not defined   #
-> > y = 3.0    # 1.0          # 3.0          # not defined   #
-> > swap = x   # 1.0          # 3.0          # 1.0           #
-> > x = y      # 3.0          # 3.0          # 1.0           #
-> > y = swap   # 3.0          # 1.0          # 1.0           #
-> > ~~~
-> > {: .output}
-> >
-> > These three lines exchange the values in `x` and `y` using the `swap`
-> > variable for temporary storage. This is a fairly common programming idiom.
->{: .solution}
-{: .challenge}
-
 > ## Predicting Values
 >
 > What is the final value of `position` in the program below?
@@ -261,58 +207,6 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 >{: .solution}
 {: .challenge}
 
-> ## Challenge
->
-> If you assign `a = 123`,
-> what happens if you try to get the second digit of `a` via `a[1]`?
->
-> > ## Solution
-> > Numbers are not strings or sequences and Python will raise an error if you try to perform an index operation on a
-> > number. In the [next lesson on types and type conversion]({{ page.root }}/03-types-conversion/#convert-numbers-and-strings)
-> > we will learn more about types and how to convert between different types. If you want the Nth digit of a number you
-> > can convert it into a string using the `str` built-in function and then perform an index operation on that string.
-> >
-> > ~~~
-> > a = 123
-> > print(a[1])
-> > ~~~
-> > {: .language-python}
-> > ~~~
-> > TypeError: 'int' object is not subscriptable
-> > ~~~
-> > {: .error}
-> >
-> >
-> > ~~~
-> > a = str(123)
-> > print(a[1])
-> > ~~~
-> > {: .language-python}
-> > ~~~
-> > 2
-> > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
-
-> ## Choosing a Name
->
-> Which is a better variable name, `m`, `min`, or `minutes`?
-> Why?
-> Hint: think about which code you would rather inherit
-> from someone who is leaving the lab:
->
-> 1. `ts = m * 60 + s`
-> 2. `tot_sec = min * 60 + sec`
-> 3. `total_seconds = minutes * 60 + seconds`
->
-> > ## Solution
-> >
-> > `minutes` is better because `min` might mean something like "minimum"
-> > (and actually is an existing built-in function in Python that we will cover later).
-> {: .solution}
-{: .challenge}
-
 > ## Slicing practice
 >
 > What does the following program print?
@@ -329,36 +223,5 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > atom_name[1:3] is: ar
 > > ~~~
 > > {: .output}
-> {: .solution}
-{: .challenge}
-
-> ## Slicing concepts
->
-> Given the following string:
->
-> ~~~
-> species_name = "Acacia buxifolia"
-> ~~~
-> {: .language-python}
->
-> What would these expressions return?
->
-> 1.  `species_name[2:8]`
-> 2.  `species_name[11:]` (without a value after the colon)
-> 3.  `species_name[:4]` (without a value before the colon)
-> 4.  `species_name[:]` (just a colon)
-> 5.  `species_name[11:-3]`
-> 6.  `species_name[-5:-3]`
-> 7.  What happens when you choose a `stop` value which is out of range? (i.e., try `species_name[0:20]` or `species_name[:103]`)
->
-> > ## Solutions
-> >
-> > 1.  `species_name[2:8]` returns the substring `'acia b'`
-> > 2.  `species_name[11:]` returns the substring `'folia'`, from position 11 until the end
-> > 3.  `species_name[:4]` returns the substring `'Acac'`, from the start up to but not including position 4
-> > 4.  `species_name[:]` returns the entire string `'Acacia buxifolia'`
-> > 5.  `species_name[11:-3]` returns the substring `'fo'`, from the 11th position to the third last position
-> > 6.  `species_name[-5:-3]` also returns the substring `'fo'`, from the fifth last position to the third last
-> > 7.  If a part of the slice is out of range, the operation does not fail. `species_name[0:20]` gives the same result as `species_name[0:]`, and `species_name[:103]` gives the same result as `species_name[:]`
 > {: .solution}
 {: .challenge}
