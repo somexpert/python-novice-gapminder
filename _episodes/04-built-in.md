@@ -64,17 +64,6 @@ after
     it usually returns the special value `None`. `None` is a Python
     object that stands in anytime there is no value.
 
-~~~
-result = print('example')
-print('result of print is', result)
-~~~
-{: .language-python}
-~~~
-example
-result of print is None
-~~~
-{: .output}
-
 ## Commonly-used built-in functions include `max`, `min`, and `round`.
 
 *   Use `max` to find the largest value of one or more values.
@@ -278,107 +267,6 @@ NameError: name 'aege' is not defined
 {: .error}
 
 *   Fix syntax errors by reading the source and runtime errors by tracing execution.
-
-> ## What Happens When
->
-> 1. Explain in simple terms the order of operations in the following program:
->    when does the addition happen, when does the subtraction happen,
->    when is each function called, etc.
-> 2. What is the final value of `radiance`?
->
-> ~~~
-> radiance = 1.0
-> radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
-> ~~~
-> {: .language-python}
-> > ## Solution
-> > 1. Order of operations:
-> >    1. `1.1 * radiance = 1.1`
-> >    2. `1.1 - 0.5 = 0.6`
-> >    3. `min(radiance, 0.6) = 0.6`
-> >    4. `2.0 + 0.6 = 2.6`
-> >    5. `max(2.1, 2.6) = 2.6`
-> > 2. At the end, `radiance = 2.6`
-> {: .solution}
-{: .challenge}
-
-> ## Spot the Difference
->
-> 1. Predict what each of the `print` statements in the program below will print.
-> 2. Does `max(len(rich), poor)` run or produce an error message?
->    If it runs, does its result make any sense?
->
-> ~~~
-> easy_string = "abc"
-> print(max(easy_string))
-> rich = "gold"
-> poor = "tin"
-> print(max(rich, poor))
-> print(max(len(rich), len(poor)))
-> ~~~
-> {: .language-python}
-> > ## Solution
-> > ~~~
-> > print(max(easy_string))
-> > ~~~
-> > {: .language-python}
-> > ~~~
-> > c
-> > ~~~
-> > {: .output}
-> > ~~~
-> > print(max(rich, poor))
-> > ~~~
-> > {: .language-python}
-> > ~~~
-> > tin
-> > ~~~
-> > {: .output}
-> > ~~~
-> > print(max(len(rich), len(poor)))
-> > ~~~
-> > {: .language-python}
-> > ~~~
-> > 4
-> > ~~~
-> > {: .output}
-> > `max(len(rich), poor)` throws a TypeError. This turns into `max(4, 'tin')` and 
-> > as we discussed earlier a string and integer cannot meaningfully be compared.
-> > ~~~
-> > TypeError                                 Traceback (most recent call last)
-> > <ipython-input-65-bc82ad05177a> in <module>
-> > ----> 1 max(len(rich), poor)
-> > 
-> > TypeError: '>' not supported between instances of 'str' and 'int'
-> > ~~~
-> > {: .error }
-> {: .solution}
-{: .challenge}
-
-> ## Why Not?
->
-> Why is it that `max` and `min` do not return `None` when they are called with no arguments?
->
-> > ## Solution
-> > `max` and `min` return TypeErrors in this case because the correct number of parameters
-> > was not supplied. If it just returned `None`, the error would be much harder to trace as it
-> > would likely be stored into a variable and used later in the program, only to likely throw
-> > a runtime error.
-> {: .solution}
-{: .challenge}
-
-> ## Last Character of a String
->
-> If Python starts counting from zero,
-> and `len` returns the number of characters in a string,
-> what index expression will get the last character in the string `name`?
-> (Note: we will see a simpler way to do this in a later episode.)
->
-> > ## Solution
-> >
-> > `name[len(name) - 1]`
-> {: .solution}
-{: .challenge}
 
 > ## Explore the Python docs!
 >
