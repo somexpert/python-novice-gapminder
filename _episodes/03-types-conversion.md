@@ -1,7 +1,7 @@
 ---
 title: "Data Types and Type Conversion"
-teaching: 10
-exercises: 10
+teaching: 5
+exercises: 7
 questions:
 - "What kinds of data do programs store?"
 - "How can I convert one type to another?"
@@ -13,8 +13,8 @@ keypoints:
 - "Every value has a type."
 - "Use the built-in function `type` to find the type of a value."
 - "Types control what operations can be done on values."
-- "Strings can be added and multiplied."
-- "Strings have a length (but numbers don't)."
+- "Strings can be added."
+- "Strings have a length."
 - "Must convert numbers to strings or vice versa when operating on them."
 - "Can mix integers and floats freely in operations."
 - "Variables only change value when something is assigned to them."

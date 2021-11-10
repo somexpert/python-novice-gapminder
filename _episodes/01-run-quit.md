@@ -1,19 +1,16 @@
 ---
 title: "Running and Quitting"
-teaching: 15
-exercises: 0
+teaching: 8
+exercises: 2
 questions:
 - "How can I run Python programs?"
 objectives:
 - "Launch the JupyterLab server." 
-- "Create a new Python script." 
 - "Create a Jupyter notebook."
 - "Shutdown the JupyterLab server."
-- "Understand the difference between a Python script and a Jupyter notebook."
 - "Create Markdown cells in a notebook."
 - "Create and run Python cells in a notebook."
 keypoints:
-- "Python scripts are plain text files."
 - "Use the Jupyter Notebook for editing and running Python."
 - "The Notebook has Command and Edit modes."
 - "Use the keyboard and mouse to select and edit cells."

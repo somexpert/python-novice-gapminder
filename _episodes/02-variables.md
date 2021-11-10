@@ -1,7 +1,7 @@
 ---
 title: "Variables and Assignment"
-teaching: 10
-exercises: 10
+teaching: 8
+exercises: 4
 questions:
 - "How can I store data in programs?"
 objectives:
@@ -10,7 +10,6 @@ objectives:
 keypoints:
 - "Use variables to store values."
 - "Use `print` to display values."
-- "Variables persist between cells."
 - "Variables must be created before they are used."
 - "Variables can be used in calculations."
 - "Use an index to get a single character from a string."
