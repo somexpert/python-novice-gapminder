@@ -1,6 +1,6 @@
 ---
 title: "Running and Quitting"
-teaching: 8
+teaching: 6
 exercises: 2
 questions:
 - "How can I run Python programs?"
@@ -8,14 +8,11 @@ objectives:
 - "Launch the JupyterLab server." 
 - "Create a Jupyter notebook."
 - "Shutdown the JupyterLab server."
-- "Create Markdown cells in a notebook."
 - "Create and run Python cells in a notebook."
 keypoints:
 - "Use the Jupyter Notebook for editing and running Python."
 - "The Notebook has Command and Edit modes."
 - "Use the keyboard and mouse to select and edit cells."
-- "The Notebook will turn Markdown into pretty-printed documentation."
-- "Markdown does most of what HTML does."
 ---
 
 ## Getting Started with JupyterLab
@@ -169,114 +166,6 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 *   Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> together will execute the contents of the cell.
 *   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd> keys on the right of the keyboard are 
     right next to each other.
-
-### The Notebook will turn Markdown into pretty-printed documentation.
-
-*   Notebooks can also render [Markdown][markdown].
-    *   A simple plain-text format for writing lists, links, 
-        and other things that might go into a web page.
-    *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
-*   Turn the current cell into a Markdown cell by entering the Command mode (<kbd>Esc</kbd>/gray) 
-    and press the <kbd>M</kbd> key.
-*   `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in 
-    Markdown.
-*   Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>/gray) and 
-    press the <kbd>y</kbd> key.
-
-### Markdown does most of what HTML does.
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-*   Use asterisks
-*   to create
-*   bullet lists.
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-*   Use asterisks
-*   to create
-*   bullet lists.
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-1.  Use numbers
-1.  to create
-1.  numbered lists.
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-
-1.  Use numbers
-1.  to create
-1.  numbered lists.
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-*  You can use indents
-	*  To create sublists 
-	*  of the same type
-*  Or sublists
-	1. Of different
-	1. types
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-*  You can use indents
-	*  To create sublists
-	*  of the same type
-*  Or sublists
-	1. Of different
-	1. types
-  
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-# A Level-1 Heading
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-# A Level-1 Heading
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-## A Level-2 Heading (etc.)
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-## A Level-2 Heading (etc.)
-
-  </div>
-</div>
 
 > ## More Math
 >
